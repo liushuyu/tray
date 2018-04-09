@@ -16,4 +16,4 @@ addons:
             - nsis
 before_script:
     - sw_vers -productVersion && brew update && brew install ant; ant -version
-script: _SILENT_JAVA_OPTIONS="${_JAVA_OPTIONS}"; unset _JAVA_OPTIONS; ant $TARGET
+script: _SILENT_JAVA_OPTIONS="${_JAVA_OPTIONS}"; unset _JAVA_OPTIONS; ant $TARGET; cat out/build/windows-packager.nsi
